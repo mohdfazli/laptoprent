@@ -97,7 +97,9 @@ h1, h2, h3, h4, h5, h6 {
 </footer>
 <script>
   function calcprice(){
-    document.getElementById("total").value = "RM " + document.getElementById("daysrent").value * 2 + ".00 Only!" 
+    if (document.getElementById("total").value > 0){
+      document.getElementById("total").value = "RM " + document.getElementById("daysrent").value * 2 + ".00 Only!" 
+    }
   }
 </script>
 </body>
